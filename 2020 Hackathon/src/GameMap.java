@@ -317,9 +317,8 @@ public class GameMap extends JFrame implements ActionListener{
 				if (getPlayer().gameOverResp) {
 					gameOver = true;
 					northButton.setText("Try again");
-					southButton.setText("Quit");
 					northButton.setEnabled(true);
-					southButton.setEnabled(true);
+					southButton.setEnabled(false);
 					eastButton.setEnabled(false);
 					westButton.setEnabled(false);
 					interButton.setEnabled(false);
@@ -329,9 +328,8 @@ public class GameMap extends JFrame implements ActionListener{
 			if (getPlayer().gameOver) {
 				gameOver = true;
 				northButton.setText("Try again");
-				southButton.setText("Quit");
 				northButton.setEnabled(true);
-				southButton.setEnabled(true);
+				southButton.setEnabled(false);
 				eastButton.setEnabled(false);
 				westButton.setEnabled(false);
 				interButton.setEnabled(false);
@@ -353,9 +351,7 @@ public class GameMap extends JFrame implements ActionListener{
 				getPlayer().setBackground(Color.blue);
 				setButtons();
 				setDescription();
-			}
-			else {
-				
+				gameOver = false;
 			}
 		}
 
